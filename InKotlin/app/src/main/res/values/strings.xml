@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ConnectFour</string>
+    <string name="boxContentDesc">box for circle</string>
 </resources>
