@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp">
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/animationView"
+        app:lottie_rawRes="@raw/winner_animation"
+        app:lottie_autoPlay="true"
+        android:scaleType="centerCrop"
+        app:lottie_loop="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/ivColorWinner"
+        tools:src="@drawable/blue_circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/animationView"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvVictories"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:text="4 victorias"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivColorWinner"
+        app:layout_constraintBottom_toBottomOf="@id/ivColorWinner"
+        />
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
