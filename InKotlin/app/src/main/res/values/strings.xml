@@ -2,4 +2,7 @@
     <string name="app_name">ConnectFour</string>
     <string name="boxContentDesc">box for circle</string>
     <string name="accept">Aceptar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="resetGameMsg">Realmente quieres reiniciar la partida?</string>
+    <string name="resetStats">Quieres reiniciar las estadísticas?</string>
 </resources>

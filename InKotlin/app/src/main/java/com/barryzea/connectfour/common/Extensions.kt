@@ -1,6 +1,8 @@
 package com.barryzea.connectfour.common
 
 import android.app.Activity
+import android.os.Handler
+import android.os.Looper
 import android.view.Gravity
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -46,6 +48,11 @@ fun Activity.createLinearLayout():LinearLayout{
     return linearLayoutRow
 }
 
+fun  postDelay(delayMillis:Long, block:()->Unit){
+    Handler(Looper.getMainLooper()).postDelayed({
+        block()
+    },delayMillis)
+}
 fun Activity.showGameOverDialog(colorWinner:Int,victories:Int, onClickDialog:()->Unit){
     val bind = WinnerDialogLayoutBinding.inflate(layoutInflater)
     var pieceDrawable=0
@@ -53,7 +60,7 @@ fun Activity.showGameOverDialog(colorWinner:Int,victories:Int, onClickDialog:()-
         Constants.MY_PLAYER_COLOR->{pieceDrawable=R.drawable.green_circle}
         Constants.OTHER_PLAYER_COLOR->{pieceDrawable=R.drawable.yellow_circle}
     }
-    val materialDialog = MaterialAlertDialogBuilder(this)
+   MaterialAlertDialogBuilder(this)
         .setView(bind.root)
         .setPositiveButton(R.string.accept){d,_->
             onClickDialog()
@@ -63,4 +70,14 @@ fun Activity.showGameOverDialog(colorWinner:Int,victories:Int, onClickDialog:()-
         .show()
     bind.ivColorWinner.setImageResource(pieceDrawable)
     bind.tvVictories.text=victories.toString()
+}
+fun Activity.showResetMessage(msg:String,onClickDialog:()->Unit){
+    MaterialAlertDialogBuilder(this)
+        .setMessage(msg)
+        .setPositiveButton(R.string.accept){dialog,_->
+            onClickDialog()
+            dialog.dismiss()
+        }
+        .setNegativeButton(R.string.cancel){dialog,_-> dialog.dismiss()}
+        .show()
 }
