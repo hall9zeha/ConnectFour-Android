@@ -4,5 +4,5 @@
     <string name="accept">Aceptar</string>
     <string name="cancel">Cancelar</string>
     <string name="resetGameMsg">Realmente quieres reiniciar la partida?</string>
-    <string name="resetStats">Quieres reiniciar las estadísticas?</string>
+    <string name="resetScore">Quieres reiniciar las estadísticas?</string>
 </resources>

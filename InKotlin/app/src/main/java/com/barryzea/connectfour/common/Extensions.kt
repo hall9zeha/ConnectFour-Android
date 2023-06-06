@@ -19,13 +19,6 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
  * Copyright (c)  All rights reserved.
  **/
 
-fun Activity.showToast(msg:String, duration:Int=Toast.LENGTH_SHORT){
- Toast.makeText(this, msg, duration).show()
-}
-fun Activity.showToast(msgRes:Int, duration:Int=Toast.LENGTH_SHORT){
-  Toast.makeText(this,this.getString(msgRes) , duration).show()
-}
-
 fun Activity.createImageViewPiece(x:Int, y:Int, onClickListener:(String)->Unit): ImageView {
     val params= ViewGroup.LayoutParams(
         resources.getDimensionPixelSize(R.dimen.width),
@@ -35,7 +28,7 @@ fun Activity.createImageViewPiece(x:Int, y:Int, onClickListener:(String)->Unit):
     boxImg.layoutParams=params
     boxImg.tag="$x,$y"
     boxImg.setPadding(4,4,4,4)
-    boxImg.setBackgroundResource(R.drawable.circle_box)
+    boxImg.setBackgroundResource(R.drawable.box_piece)
     boxImg.setOnClickListener {onClickListener(boxImg.tag.toString())}
 
     return boxImg
@@ -71,7 +64,7 @@ fun Activity.showGameOverDialog(colorWinner:Int,victories:Int, onClickDialog:()-
     bind.ivColorWinner.setImageResource(pieceDrawable)
     bind.tvVictories.text=victories.toString()
 }
-fun Activity.showResetMessage(msg:String,onClickDialog:()->Unit){
+fun Activity.showResetDialog(msg:String, onClickDialog:()->Unit){
     MaterialAlertDialogBuilder(this)
         .setMessage(msg)
         .setPositiveButton(R.string.accept){dialog,_->
