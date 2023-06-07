@@ -92,7 +92,7 @@ class MainActivity : AppCompatActivity() {
                }
            }
         }
-       postDelay(1300) {
+       postDelay(1100) {
            showGameOverDialog(colorWinn, victories) {
                populateGameBoard()
                loadOrClearScore(true)
