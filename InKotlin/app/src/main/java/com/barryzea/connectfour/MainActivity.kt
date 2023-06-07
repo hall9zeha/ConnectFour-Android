@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
     private var winningCoords:MutableList<MutableList<Pair<Int, Int>>> = arrayListOf(arrayListOf())
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.Base_Theme_ConnectFour)
         super.onCreate(savedInstanceState)
         bind = ActivityMainBinding.inflate(layoutInflater)
         setContentView(bind.root)
@@ -40,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         loadOrClearScore(true)
         bind.lnContent.removeAllViews()
         linearLayoutColumn?.removeAllViews()
-        arrayPieces= Array(COLUMNS){ Array(ROWS){Piece()} }
+        arrayPieces= Array(COLUMNS){ Array(ROWS){Piece()} }//inicializamos el array de piezas del tablero
 
         for(column in  0  until COLUMNS){
            linearLayoutColumn = createLinearLayout()
@@ -166,7 +167,7 @@ class MainActivity : AppCompatActivity() {
                 Constants.OTHER_PLAYER_COLOR -> {OTHER_PLAYER_SCORE++;showGameOverDialog(currentPlayColor,OTHER_PLAYER_SCORE)}
             }
         }
-        winningCoords.clear()//limpiamos las coordenadas  ganadoras para la próxima partida
+        winningCoords.clear()//limpiamos las coordenadas  que hayan conectado cuatro para la próxima partida
         return false
     }
     private fun checkEachDirection(col:Int,row:Int):Boolean{
@@ -180,13 +181,13 @@ class MainActivity : AppCompatActivity() {
                 checkCoordinates(col,row,-1,-1))  //diagonal superior izquierda
     }
     private fun checkCoordinates(col:Int, row:Int, col1:Int, row1:Int):Boolean{
-        var cordList= mutableListOf<Pair<Int,Int>>()//creamos una lista para agregar las coordenadas
-        cordList.add(Pair(col,row))//Agregamos la primera coordenada origen, para sumar con ella 4 piezas si conectan cuatro
+        var coordsList= mutableListOf<Pair<Int,Int>>()//creamos una lista para agregar las coordenadas
+        coordsList.add(Pair(col,row))//Agregamos la primera coordenada origen, para sumar con ella 4 piezas si conectan cuatro
         for(i in 1 until 4){
-            if(checkNextPiece(col,row,col+(i*col1),row+(i*row1))) cordList.add(Pair(col+(i*col1),row+(i*row1)))
+            if(checkNextPiece(col,row,col+(i*col1),row+(i*row1))) coordsList.add(Pair(col+(i*col1),row+(i*row1)))
             if(!checkNextPiece(col,row,col+(i*col1),row+(i*row1))) break
             else if(i>=3){
-                winningCoords.add(cordList)//Opcional: Agregamos las coordenadas para ponerle un background que las remarque si resulta ganador
+                winningCoords.add(coordsList)//Opcional: Agregamos las coordenadas para ponerle un background que las remarque si resulta ganador
                 return true
             }
         }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ConnectFour</string>
+    <string name="app_name">Connect Four</string>
     <string name="boxContentDesc">box for circle</string>
     <string name="accept">Aceptar</string>
     <string name="cancel">Cancelar</string>

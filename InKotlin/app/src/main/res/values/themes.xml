@@ -3,7 +3,13 @@
     <style name="Base.Theme.ConnectFour" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:windowLightStatusBar" tools:ignore="newApi">false</item>
     </style>
 
     <style name="Theme.ConnectFour" parent="Base.Theme.ConnectFour" />
+    <style name="MySplashScreenTheme" parent="Base.Theme.ConnectFour">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+        <item name="android:statusBarColor">?attr/colorSurface</item>
+        <item name="android:windowLightStatusBar" tools:ignore="newApi">true</item>
+    </style>
 </resources>
