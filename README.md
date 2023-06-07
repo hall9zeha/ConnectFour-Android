@@ -23,7 +23,10 @@ Reto técnico: Crea el juego conecta cuatro
 * Guardar el número de partidas ganadas de cada equipo mientras la App no se finaliza.
 * Dos botones para reiniciar la partida en marcha y para resetear el contador de victorias y derrotas.
 * Puedes añadirle todas las funcionalidades extra que consideres.
-
+## Game demo 🎥
+||
+|--|
+|<p align="center" width="70%"><img src="https://github.com/hall9zeha/ConnectFour-Android/blob/main/screenshots/connect4.gif"  alt="drawing" width="80%" height="80%"/></p>|
 ## Screenshots 🖼️
 ||||
 |--|--|--|
