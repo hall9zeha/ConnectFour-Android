@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Connect Four</string>
+    <string name="boxContentDesc">box for circle</string>
+    <string name="accept">Accept</string>
+    <string name="cancel">Cancel</string>
+    <string name="resetGameMsg">Do you really want to restart the game?</string>
+    <string name="resetScore">Do you want to reset the statistics?</string>
+</resources>
