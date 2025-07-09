@@ -26,8 +26,8 @@ Reto técnico: Crea el juego conecta cuatro
 ## Game demo 🎥
 ||
 |--|
-|<p align="center" width="70%"><img src="https://github.com/hall9zeha/ConnectFour-Android/blob/main/screenshots/connect4.gif"  alt="drawing" width="80%" height="80%"/></p>|
+|<p align="center" width="70%"><img src="https://github.com/hall9zeha/ConnectFour-Android/blob/main/screenshots/connect4.gif"  alt="drawing" width="80%"/></p>|
 ## Screenshots 🖼️
 ||||
 |--|--|--|
-|<p align="center" width="70%"><img src="https://github.com/hall9zeha/ConnectFour-Android/blob/main/screenshots/screen1.jpg"  alt="drawing" width="70%" height="70%"/></p>|<p align="center" width="70%"><img src="https://github.com/hall9zeha/ConnectFour-Android/blob/main/screenshots/screen2.jpg"  alt="drawing" width="70%" height="70%"/></p>|<p align="center" width="70%"><img src="https://github.com/hall9zeha/ConnectFour-Android/blob/main/screenshots/screen3.jpg"  alt="drawing" width="70%" height="70%"/></p>|
+|<p align="center" width="70%"><img src="https://github.com/hall9zeha/ConnectFour-Android/blob/main/screenshots/screen1.jpg"  alt="drawing" width="70%"/></p>|<p align="center" width="70%"><img src="https://github.com/hall9zeha/ConnectFour-Android/blob/main/screenshots/screen2.jpg"  alt="drawing" width="70%"/></p>|<p align="center" width="70%"><img src="https://github.com/hall9zeha/ConnectFour-Android/blob/main/screenshots/screen3.jpg"  alt="drawing" width="70%"/></p>|
